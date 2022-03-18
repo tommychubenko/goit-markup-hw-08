@@ -1,0 +1,143 @@
+.adress {
+  font-style: normal;
+}
+
+.adress .link {
+  display: block;
+  /* font-style: normal; */
+  text-decoration: none;
+  color: #ffffff;
+  line-height: 1.71;
+}
+
+.footer {
+  background-color: $background-color-number-two;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-block {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-block__1 {
+  margin-right: 70px;
+}
+
+.adress__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.adress__link {
+  line-height: 1.71;
+  color: #ffffff;
+  text-decoration: none;
+  font-style: normal;
+  transition: color $standart-transition-time $standart-transition-style;
+
+  &:hover,
+  &:focus {
+    color: $accent-text-color;
+  }
+}
+
+.opacity-60 {
+  opacity: 0.6;
+}
+
+.social-media__block--footer {
+  margin-right: auto;
+}
+
+.social-media__title--footer {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.17;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+  letter-spacing: 0.03em;
+}
+
+.social-media__list--footer {
+  display: flex;
+  /* background-color: #2196f3; */
+  /* justify-content: space-between; */
+}
+
+.social-media__item--footer:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-media__link--footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  width: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: background-color $standart-transition-time
+    $standart-transition-style;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-text-color;
+  }
+}
+
+.social-media__icon--footer {
+  fill: #ffffff;
+}
+
+.footer-form__title {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.17;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.footer-email__input {
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+  margin-right: 12px;
+  color: #ffffff;
+  font-size: 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  outline-width: 0;
+  background-color: $background-color-number-two;
+}
+
+.footer-email__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+
+  background-color: $accent-text-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.footer-email__form {
+  display: flex;
+}
+
+.footer-email__text {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+
+  color: #ffffff;
+
+  margin-right: 10px;
+}

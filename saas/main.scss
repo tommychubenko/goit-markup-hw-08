@@ -1,0 +1,30 @@
+@import "./utils/variables";
+@import "./components/logo";
+@import "./components/footer";
+@import "./components/header";
+@import "./components/hero";
+@import "./components/backdrop-and-modal";
+@import "./components/benefits";
+@import "./components/our-team";
+@import "./components/partners";
+@import "./components/portfolio";
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.flex {
+  display: flex;
+}
+
+.block {
+  display: block;
+}
