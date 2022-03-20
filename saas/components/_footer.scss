@@ -6,7 +6,7 @@
   display: block;
   /* font-style: normal; */
   text-decoration: none;
-  color: #ffffff;
+  color: $white-color;
   line-height: 1.71;
 }
 
@@ -31,7 +31,7 @@
 
 .adress__link {
   line-height: 1.71;
-  color: #ffffff;
+  color: $white-color;
   text-decoration: none;
   font-style: normal;
   transition: color $standart-transition-time $standart-transition-style;
@@ -55,7 +55,7 @@
   font-weight: 700;
   line-height: 1.17;
   text-transform: uppercase;
-  color: #ffffff;
+  color: $white-color;
   margin-bottom: 20px;
   letter-spacing: 0.03em;
 }
@@ -88,7 +88,7 @@
 }
 
 .social-media__icon--footer {
-  fill: #ffffff;
+  fill: $white-color;
 }
 
 .footer-form__title {
@@ -96,7 +96,7 @@
   font-weight: 700;
   text-transform: uppercase;
   line-height: 1.17;
-  color: #ffffff;
+  color: $white-color;
   margin-bottom: 20px;
 }
 
@@ -105,7 +105,7 @@
   height: 50px;
   padding: 15px 16px;
   margin-right: 12px;
-  color: #ffffff;
+  color: $white-color;
   font-size: 14px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -113,18 +113,13 @@
   border-radius: 4px;
   outline-width: 0;
   background-color: $background-color-number-two;
-}
 
-.footer-email__button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 200px;
-  height: 50px;
+  transition: border-color $standart-transition-time $standart-transition-style;
 
-  background-color: $accent-text-color;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+  &:hover,
+  &:focus {
+    border-color: $accent-text-color;
+  }
 }
 
 .footer-email__form {
@@ -137,7 +132,7 @@
   line-height: 1.875;
   letter-spacing: 0.06em;
 
-  color: #ffffff;
+  color: $white-color;
 
   margin-right: 10px;
 }

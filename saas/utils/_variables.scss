@@ -1,13 +1,14 @@
 $primary-text-color: #212121;
 $secondary-text-color: #757575;
 $accent-text-color: #2196f3;
+$white-color: #ffffff;
 $background-color-number-two: #2f303a;
 $icon-color-one: #afb1b8;
 $standart-transition-time: 250ms;
 $standart-transition-style: cubic-bezier(0.4, 0, 0.2, 1);
 
 body {
-  background-color: #ffffff;
+  background-color: $white-color;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 400;

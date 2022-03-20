@@ -28,7 +28,7 @@
   padding-top: 40px;
   padding-bottom: 40px;
 
-  background-color: #ffffff;
+  background-color: $white-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -48,19 +48,19 @@
   padding: 0;
   margin: 0;
 
-  background-color: #ffffff;
+  background-color: $white-color;
   border: 1px solid #0000001a;
   border-radius: 50%;
-}
-
-.modal__close-button:hover .modal__close-icon,
-.modal__close-button:focus .modal__close-icon {
-  fill: $accent-text-color;
 }
 
 .modal__close-icon {
   fill: #212121;
   transition: fill $standart-transition-time $standart-transition-style;
+
+  .modal__close-button:hover &,
+  .modal__close-button:focus & {
+    fill: $accent-text-color;
+  }
 }
 
 .form__label {
@@ -167,7 +167,7 @@
   width: 16px;
   height: 15px;
   margin-right: 10px;
-  background: #ffffff;
+  background: $white-color;
   border: 2px solid $primary-text-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -208,7 +208,7 @@
   line-height: 1.87;
   text-align: center;
 
-  color: #ffffff;
+  color: $white-color;
   background-color: $accent-text-color;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;

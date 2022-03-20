@@ -8,8 +8,11 @@
 
 .partners__list {
   display: flex;
-  justify-content: space-between;
-  /* background-color: #2196f3; */
+  align-items: center;
+}
+
+.partners__item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .partners__link {
