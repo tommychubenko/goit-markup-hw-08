@@ -4,8 +4,12 @@ $accent-text-color: #2196f3;
 $white-color: #ffffff;
 $background-color-number-two: #2f303a;
 $icon-color-one: #afb1b8;
+$icon-color-two: #f5f4fa;
 $standart-transition-time: 250ms;
 $standart-transition-style: cubic-bezier(0.4, 0, 0.2, 1);
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1200px;
 
 body {
   background-color: $white-color;
@@ -13,6 +17,24 @@ body {
   font-size: 14px;
   font-weight: 400;
   color: var(--primary-text-color);
+  &.modal-open {
+    overflow: hidden;
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+@media screen and (max-width: $mobile) {
+  body {
+    max-width: 480px;
+  }
+
+  body.no-scroll {
+    overflow: hidden;
+  }
 }
 
 button {
@@ -31,4 +53,11 @@ ul {
 
 ul {
   list-style-type: none;
+}
+
+@media screen and (max-width: $mobile) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }

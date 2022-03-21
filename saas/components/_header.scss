@@ -1,107 +1,64 @@
-.site-header {
-  border-bottom: 1px solid #ececec;
+.mobile-button__menu {
+  display: none;
 }
-.navigation {
-  display: flex;
-  align-items: center;
-}
-
-/* НАВ */
 
 .main-nav {
-  display: flex;
-  align-items: center;
-
-  /* background-color: teal; */
-}
-.nav-links {
-  display: flex;
-  margin-left: 93px;
+  border-bottom: 1px solid #ececec;
 }
 
-.nav-links__item:not(:first-child) {
-  margin-left: 50px;
-}
-
-.nav-links__link {
-  position: relative;
-
-  padding-top: 32px;
-  padding-bottom: 32px;
-  color: $primary-text-color;
-  font-weight: 500;
-  text-decoration: none;
-  line-height: 1.17;
-  letter-spacing: 0.02em;
-  display: block;
-  transition: color $standart-transition-time $standart-transition-style;
-
-  &:hover,
-  &:focus {
-    color: $accent-text-color;
-  }
-}
-
-.nav-links__link--current {
+.logo {
   color: $accent-text-color;
-
-  &::after {
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-
-    content: "";
-    display: block;
-    background-color: $accent-text-color;
-    border-radius: 2px;
-    width: 100%;
-    height: 4px;
-  }
-}
-
-/* Лінки з хедеру */
-
-.header-contacts {
-  display: flex;
-  margin-left: auto;
-  /* background-color: darkorchid; */
-  align-items: center;
-}
-
-.header-contacts__item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  &:nth-child(2) {
-    margin-left: 50px;
-  }
-}
-
-.header-contacts__icon {
-  margin-right: 10px;
-  fill: currentColor;
-
-  .header-contacts__link:hover &,
-  .header-contacts__link:focus & {
-    fill: currentColor;
-  }
-}
-
-.header-contacts__link {
-  display: flex;
-  align-items: center;
-  color: $secondary-text-color;
-  font-weight: 500;
+  font-family: "Raleway", sans-serif;
   text-decoration: none;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  transition: color $standart-transition-time $standart-transition-style;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  display: inline-block;
+}
 
-  &:hover,
-  &:focus {
-    color: $accent-text-color;
+.logo--studio-black {
+  color: $primary-text-color;
+  display: inline;
+}
+
+@media screen and (max-width: $mobile) {
+  .mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    background-color: $white-color;
+  }
+  .mobile-button__menu {
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    right: 15px;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .header-contacts {
+    display: none;
+  }
+
+  .mobile-button__menu .icon-close {
+    display: none;
+  }
+
+  .mobile-button__menu.is-open .icon-close {
+    display: block;
+  }
+
+  .mobile-button__menu.is-open .icon-menu {
+    display: none;
   }
 }

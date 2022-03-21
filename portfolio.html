@@ -14,50 +14,74 @@
         integrity="sha512-Y0MM+V6ymRKN2zStTqzQ227DWhhp4Mzdo6gnlRnuaNCbc+YN/ZH0sBCLTM4M0oSy9c9VKiCvd4Jk44aCLrNS5Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/main.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 </head>
 
 
 
-<body>
+<body overflow>
     <!--Хедер-->
 
     <header class="site-header">
     
         <div class="container main-nav">
             <nav class="navigation">
-                <a class="logo" href="./index.html">
-                    Web<div class="logo--studio-black">Studio</div></a>
+    
+    
+    
+    
+                <div class="mobile-header">
+    
+                    <a class="logo" href="./index.html">
+                        Web<div class="logo--studio-black">Studio</div></a>
+    
+    
+                    <button type="button" class="mobile-button__menu" data-menu-button aria-expanded="false">
+                        <svg class="mobile-button__icon" height="40" width="40" aria-label="Переключатель мобильного меню">
+    
+                            <use class="icon-menu" href="./images/symbol-defs.svg#icon-menu-40px"></use>
+                            <use class="icon-close" href="./images/symbol-defs.svg#icon-close-40px"></use>
+    
+                        </svg>
+                    </button>
+    
+                </div>
+    
                 <ul class="nav-links">
-                    <li class="nav-links__item"><a href="./index.html" class="nav-links__link">Студия</a>
+                    <li class="nav-links__item"><a href="./index.html"
+                            class="nav-links__link nav-links__link--current">Студия</a>
                     </li>
-                    <li class="nav-links__item"><a href="./portfolio.html" class="nav-links__link nav-links__link--current">Портфолио</a>
+                    <li class="nav-links__item"><a href="./portfolio.html" class="nav-links__link">Портфолио</a>
                     </li>
                     <li class="nav-links__item"><a href="" class="nav-links__link">Контакты</a></li>
-                    
                 </ul>
-            </nav>
+        </div>
+        </nav>
     
     
-            <ul class="header-contacts">
-                <li class="header-contacts__item">
-                    <a href="mailto:info@devstudio.com" class="header-contacts__link"><svg class="header-contacts__icon"
-                            width="16px" height="12px">
-                            <use href="./images/symbol-defs.svg#icon-mail"></use>
-                        </svg>
-                        info@devstudio.com</a>
-                </li>
-                <li class="header-contacts__item">
+        <ul class="header-contacts">
+            <li class="header-contacts__item">
+                <a href="mailto:info@devstudio.com" class="header-contacts__link"><svg class="header-contacts__icon"
+                        width="16px" height="12px">
+                        <use href="./images/symbol-defs.svg#icon-mail"></use>
+                    </svg>
+                    info@devstudio.com</a>
+            </li>
+            <li class="header-contacts__item">
     
     
-                    <a href="tel:+380961111111" class="header-contacts__link"><svg class="header-contacts__icon"
-                            width="10px" height="16px">
-                            <use href="./images/symbol-defs.svg#icon-phone"></use>
-                        </svg>
-                        +38 096 111 11 11
-                    </a>
-                </li>
-            </ul>
+                <a href="tel:+380961111111" class="header-contacts__link"><svg class="header-contacts__icon" width="10px"
+                        height="16px">
+                        <use href="./images/symbol-defs.svg#icon-phone"></use>
+                    </svg>
+                    +38 096 111 11 11
+                </a>
+            </li>
+        </ul>
+    
+        </div>
+    
         </div>
     
     </header>
@@ -204,6 +228,7 @@
     
     
     
+    
         <div class="container footer-block">
     
             <div class="footer-block__1">
@@ -277,7 +302,52 @@
     
     
     </footer>
-    <script src="./modal.js"></script>
+
+
+<div class="mobile-menu" data-menu id="mobile-menu">
+    <nav class="navigation-mobile">
+        <ul class="nav-links-mobile">
+            <li class="nav-links__item--mobile"><a href="./index.html"
+                    class="nav-links__link--mobile ">Студия</a>
+            </li>
+            <li class="nav-links__item--mobile"><a href="./portfolio.html" class="nav-links__link--mobile nav-links__link--mobile--current">Портфолио</a>
+            </li>
+            <li class="nav-links__item--mobile"><a href="" class="nav-links__link--mobile">Контакты</a></li>
+        </ul>
+    </nav>
+    <ul class="header-contacts-mobile">
+        <li class="header-contacts__item--mobile">
+            <a href="tel:+380961111111" class="header-contacts__link--mobile">
+                +38 096 111 11 11
+            </a>
+        </li>
+        <li class="header-contacts__item--mobile">
+            <a href="mailto:info@devstudio.com" class="header-contacts__link--mail">
+                info@devstudio.com</a>
+        </li>
+
+    </ul>
+
+    <ul class="mobile-menu__social-network--list">
+        <li class="mobile-menu__social-network--item"><a href="" class="mobile-menu__social-network--link">Instagram</a>
+        </li>
+        <div class="mobile-menu__social-network--divider">|</div>
+        <li class="mobile-menu__social-network--item"><a href="" class="mobile-menu__social-network--link">Twitter</a>
+        </li>
+        <div class="mobile-menu__social-network--divider">|</div>
+        <li class="mobile-menu__social-network--item"><a href="" class="mobile-menu__social-network--link">Facebook</a>
+        </li>
+        <div class="mobile-menu__social-network--divider">|</div>
+        <li class="mobile-menu__social-network--item"><a href="" class="mobile-menu__social-network--link">LinkedIn</a>
+        </li>
+    </ul>
+
+
+</div>
+
+
+    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 
 </html>
