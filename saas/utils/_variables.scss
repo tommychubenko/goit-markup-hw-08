@@ -5,11 +5,11 @@ $white-color: #ffffff;
 $background-color-number-two: #2f303a;
 $icon-color-one: #afb1b8;
 $icon-color-two: #f5f4fa;
+$border-color-one: #eeeeee;
 $standart-transition-time: 250ms;
 $standart-transition-style: cubic-bezier(0.4, 0, 0.2, 1);
-$mobile: 480px;
-$tablet: 768px;
-$desktop: 1200px;
+$tablet: 481px;
+$pc: 769px;
 
 body {
   background-color: $white-color;
@@ -27,19 +27,15 @@ img {
   width: 100%;
   height: auto;
 }
-@media screen and (max-width: $mobile) {
-  body {
-    max-width: 480px;
-  }
 
-  body.no-scroll {
-    overflow: hidden;
-  }
+body.no-scroll {
+  overflow: hidden;
 }
 
 button {
   cursor: pointer;
   border: 0;
+  padding: 0;
 }
 
 h1,
@@ -54,10 +50,14 @@ ul {
 ul {
   list-style-type: none;
 }
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
-@media screen and (max-width: $mobile) {
+@media screen and (min-width: $pc) {
   .container {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 215px;
+    padding-right: 215px;
   }
 }

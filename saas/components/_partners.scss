@@ -1,55 +1,83 @@
-@media screen and (max-width: $mobile) {
+.partners {
+  padding: 60px 0;
+}
+.partners__list-header {
+  text-align: center;
+
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: $primary-text-color;
+
+  margin-bottom: 45px;
+}
+
+.partners__list {
+  margin: -15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.partners__item {
+  margin: 15px;
+}
+.partners__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 92px;
+  width: 210px;
+
+  border: $icon-color-one 1px solid;
+  border-radius: 4px;
+
+  transition: border $standart-transition-time $standart-transition-style;
+
+  &:hover,
+  &:focus {
+    border: $accent-text-color 1px solid;
+    outline-width: 0;
+  }
+}
+
+.partners__icon {
+  fill: $icon-color-one;
+  .partners__link:hover &,
+  .partners__link:focus & {
+    fill: $accent-text-color;
+  }
+  transition: fill $standart-transition-time $standart-transition-style;
+}
+
+@media screen and (min-width: $pc) {
   .partners {
-    padding: 60px 0;
+    padding: 94px 0;
   }
   .partners__list-header {
-    text-align: center;
-
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    color: $primary-text-color;
-
-    margin-bottom: 45px;
+    font-size: 36px;
+    margin-bottom: 50px;
   }
 
   .partners__list {
-    margin: -30px;
+    margin: 0;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
   }
   .partners__item {
-    margin: 15px;
+    margin: 0;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
+
+  // ---------------
+
   .partners__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    height: 92px;
-    width: 210px;
-
-    border: $icon-color-one 1px solid;
-    border-radius: 4px;
-
-    transition: border $standart-transition-time $standart-transition-style;
-
-    &:hover,
-    &:focus {
-      border: $accent-text-color 1px solid;
-      outline-width: 0;
-    }
-  }
-
-  .partners__icon {
-    fill: $icon-color-one;
-    .partners__link:hover &,
-    .partners__link:focus & {
-      fill: $accent-text-color;
-    }
-    transition: fill $standart-transition-time $standart-transition-style;
+    width: 170px;
   }
 }
