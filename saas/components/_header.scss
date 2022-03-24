@@ -59,6 +59,7 @@
   .main-nav {
     display: flex;
     align-items: center;
+    justify-content: center;
   }
   .navigation {
     display: flex;
@@ -142,6 +143,7 @@
 @media screen and (min-width: $pc) {
   .header-contacts {
     display: flex;
+    margin-left: 305px;
   }
 
   .header-contacts__item:not(:last-child) {

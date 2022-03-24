@@ -1,5 +1,8 @@
 .benefits {
   padding: 60px 0;
+  @media screen and (min-width: $pc) {
+    padding: 94px 0;
+  }
 }
 
 .benefits__title {
@@ -17,42 +20,7 @@
   letter-spacing: 0.03em;
   color: $secondary-text-color;
   margin-bottom: 30px;
-}
-.benefits__icon-area {
-  display: flex;
-  align-items: center;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  margin-bottom: 30px;
-  justify-content: center;
-  background-color: $icon-color-two;
-}
-
-@media screen and (min-width: $tablet) {
-  .benefits__list {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-
-    margin: -15px;
-  }
-
-  .benefits__item {
-    display: block;
-    margin: 15px;
-  }
-
-  .benefits__icon-area {
-    width: 354px;
-    height: 120px;
-  }
-
-  .benefits__icon {
-    width: 70px;
-    height: 70px;
-  }
-
-  .benefits__text {
+  @media screen and (min-width: $tablet) {
     display: block;
     max-width: 354px;
     font-size: 14px;
@@ -61,40 +29,7 @@
     letter-spacing: 0.03em;
     color: $secondary-text-color;
   }
-}
-
-@media screen and (min-width: $pc) {
-  .benefits {
-    padding: 94px 0;
-  }
-
-  .benefits__list {
-    display: flex;
-    flex-wrap: nowrap;
-    align-content: center;
-
-    margin: 0;
-  }
-
-  .benefits__item {
-    display: block;
-    margin: 0;
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
-  }
-
-  .benefits__icon-area {
-    width: 270px;
-    height: 120px;
-  }
-
-  .benefits__icon {
-    width: 70px;
-    height: 70px;
-  }
-
-  .benefits__text {
+  @media screen and (min-width: $pc) {
     display: block;
     max-width: 270px;
     font-size: 14px;
@@ -102,5 +37,55 @@
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: $secondary-text-color;
+  }
+}
+
+.benefits__icon-area {
+  display: flex;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 30px;
+  justify-content: center;
+  background-color: $icon-color-two;
+  @media screen and (min-width: $tablet) {
+    width: 354px;
+    height: 120px;
+  }
+  @media screen and (min-width: $pc) {
+    width: 270px;
+    height: 120px;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .benefits__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin: -15px;
+    @media screen and (min-width: $pc) {
+      display: flex;
+      flex-wrap: nowrap;
+      align-content: center;
+      margin: 0;
+    }
+  }
+
+  .benefits__item {
+    display: block;
+    margin: 15px;
+    @media screen and (min-width: $pc) {
+      display: block;
+      margin: 0;
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+  }
+  .benefits__icon {
+    width: 70px;
+    height: 70px;
   }
 }

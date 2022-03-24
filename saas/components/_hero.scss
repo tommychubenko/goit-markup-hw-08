@@ -1,8 +1,13 @@
 .hero {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   text-align: center;
   padding: 118px 60px;
   background-color: $background-color-number-two;
-  width: 100%;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
@@ -12,8 +17,30 @@
       url("../images/index/hero-bg/hero-bg-mobile@2x.jpg") 2x
     );
 
-  background-size: cover;
-  background-position: center;
+  @media screen and (min-width: $tablet) {
+    padding: 118px 204px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      image-set(
+        url("../images/index/hero-bg/hero-bg-tablet@1x.jpg") 1x,
+        url("../images/index/hero-bg/hero-bg-tablet@2x.jpg") 2x
+      );
+  }
+
+  @media screen and (min-width: $pc) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      image-set(
+        url("../images/index/hero-bg/hero-bg-pc@1x.jpg") 1x,
+        url("../images/index/hero-bg/hero-bg-pc@2x.jpg") 2x
+      );
+  }
 }
 
 .hero__title {
@@ -24,6 +51,10 @@
   line-height: 1.61;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  @media screen and (min-width: $pc) {
+    font-size: 44px;
+    line-height: 1.44;
+  }
 }
 
 .hero__button {
@@ -36,37 +67,4 @@
   letter-spacing: 0.06em;
   line-height: 1.87;
   padding: 10px 32px;
-}
-
-@media screen and (min-width: $tablet) {
-  .hero {
-    padding: 118px 204px;
-    background-image: linear-gradient(
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      image-set(
-        url("../images/index/hero-bg/hero-bg-tablet@1x.jpg") 1x,
-        url("../images/index/hero-bg/hero-bg-tablet@2x.jpg") 2x
-      );
-  }
-}
-@media screen and (min-width: $pc) {
-  .hero {
-    padding-top: 200px;
-    padding-bottom: 200px;
-    background-image: linear-gradient(
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      image-set(
-        url("../images/index/hero-bg/hero-bg-pc@1x.jpg") 1x,
-        url("../images/index/hero-bg/hero-bg-pc@2x.jpg") 2x
-      );
-  }
-
-  .hero__title {
-    font-size: 44px;
-    line-height: 1.44;
-  }
 }

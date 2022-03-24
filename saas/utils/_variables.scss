@@ -8,8 +8,8 @@ $icon-color-two: #f5f4fa;
 $border-color-one: #eeeeee;
 $standart-transition-time: 250ms;
 $standart-transition-style: cubic-bezier(0.4, 0, 0.2, 1);
-$tablet: 481px;
-$pc: 769px;
+$tablet: 768px;
+$pc: 1200px;
 
 body {
   background-color: $white-color;
@@ -50,14 +50,21 @@ ul {
 ul {
   list-style-type: none;
 }
+
 .container {
   padding-left: 15px;
   padding-right: 15px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: $tablet) {
+  .container {
+    width: 768px;
+  }
 }
 
 @media screen and (min-width: $pc) {
   .container {
-    padding-left: 215px;
-    padding-right: 215px;
+    width: 1200px;
   }
 }

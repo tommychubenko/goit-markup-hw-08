@@ -6,8 +6,13 @@
 .selector__list {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: $tablet) {
+    justify-content: center;
+  }
 }
+
 .selector__item {
   margin-right: 8px;
   margin-bottom: 15px;
@@ -40,13 +45,39 @@
   background-color: $accent-text-color;
 }
 
-.grid__item:not(:last-child) {
-  margin-bottom: 30px;
+.grid {
+  display: flex;
+  flex-direction: column;
+  margin: -15px;
+  margin: 0 auto;
+  align-items: center;
+  @media screen and (min-width: $tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+  @media screen and (min-width: $pc) {
+    justify-content: center;
+  }
+}
+
+.grid__item {
+  margin: 15px;
+  max-width: 450px;
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc(100% / 2 - 2 * 15px);
+    width: 354px;
+  }
+  @media screen and (min-width: $pc) {
+    flex-basis: calc(100% / 3 - 2 * 15px);
+    width: 370px;
+  }
 }
 
 .grid__image-thumb {
   position: relative;
   overflow: hidden;
+  height: 294px;
 }
 
 .grid__link {
@@ -114,53 +145,7 @@
     transition: transform $standart-transition-time $standart-transition-style;
     transition: transform $standart-transition-time $standart-transition-style;
   }
-}
-
-@media screen and (min-width: $tablet) {
-  .grid {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -15px;
-  }
-
-  .grid__item {
-    margin: 15px;
-    width: 354px;
-    &:not(:last-child) {
-      margin-bottom: 15px;
-    }
-  }
-
-  .grid__image-thumb {
-    display: flex;
-    justify-content: center;
-    height: 294px;
-  }
-  .grid__padding-20 {
-    height: 146px;
-  }
-}
-@media screen and (min-width: $pc) {
-  .selector__list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-    margin-bottom: 50px;
-  }
-
-  .selector__item {
-    margin-bottom: 0;
-  }
-
-  .grid__item {
-    width: 370px;
-  }
-
-  .grid__padding-20 {
-    height: 110px;
-  }
-
-  .grid__overflow {
+  @media screen and (min-width: $pc) {
     padding: 63px 24px;
   }
 }

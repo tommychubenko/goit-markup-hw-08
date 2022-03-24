@@ -23,6 +23,7 @@
 
   .images-samples__list {
     display: flex;
+    justify-content: center;
   }
 
   .images-samples__item:not(:last-child) {
