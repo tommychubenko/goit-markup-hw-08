@@ -62,10 +62,13 @@
 
 .grid__item {
   margin: 15px;
-  max-width: 450px;
+  width: 450px;
   @media screen and (min-width: $tablet) {
     flex-basis: calc(100% / 2 - 2 * 15px);
     width: 354px;
+    height: 440px;
+    // height: 100%;
+    // display: flex;
   }
   @media screen and (min-width: $pc) {
     flex-basis: calc(100% / 3 - 2 * 15px);
@@ -77,6 +80,12 @@
   position: relative;
   overflow: hidden;
   height: 294px;
+  margin: 0;
+  padding: 0;
+}
+
+.grid__image {
+  width: auto;
 }
 
 .grid__link {

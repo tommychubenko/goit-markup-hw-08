@@ -7,9 +7,6 @@
   left: 0;
   background-color: rgba(0, 0, 0, 0.2);
   transition: transform $standart-transition-time $standart-transition-style;
-  @media screen and (min-width: $tablet) {
-    display: none;
-  }
 }
 
 .is-hidden {
@@ -35,16 +32,17 @@
 
   background-color: $white-color;
   border-radius: 4px;
-  overflow: hidden;
+  overflow-y: scroll;
 
   @media screen and (min-width: $tablet) {
-    width: 450px;
-    height: 609px;
+    overflow-y: auto;
+    // width: 450px;
+    // height: 609px;
   }
 
   @media screen and (min-width: $pc) {
-    width: 528px;
-    height: 581px;
+    // width: 528px;
+    // height: 581px;
   }
 }
 

@@ -91,17 +91,19 @@
 }
 
 .mobile-menu__social-network--link {
+  @media screen and (max-width: $mobile) {
+    font-size: 3vw;
+  }
   text-decoration: none;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
-
   letter-spacing: 0.02em;
-
   color: $accent-text-color;
 }
 
 .mobile-menu__divider {
+  display: block;
   margin: 0 10px;
   font-size: 22px;
   line-height: 1;
