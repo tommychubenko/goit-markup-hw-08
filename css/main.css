@@ -241,10 +241,6 @@ ul {
     margin-right: 10px;
     fill: currentColor;
   }
-  .header-contacts__link:hover .header-contacts__icon,
-  .header-contacts__link:focus .header-contacts__icon {
-    fill: currentColor;
-  }
   .header-contacts__link {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -262,6 +258,7 @@ ul {
   }
   .header-contacts__link:hover, .header-contacts__link:focus {
     color: #2196f3;
+    path-fill: currentColor;
   }
 }
 
@@ -1614,7 +1611,7 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: -15px;
+  gap: 30px;
   margin: 0 auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1629,7 +1626,6 @@ ul {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin: -15px;
   }
 }
 
@@ -1642,7 +1638,6 @@ ul {
 }
 
 .grid__item {
-  margin: 15px;
   width: 450px;
 }
 
