@@ -1,6 +1,5 @@
 .selector {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 94px 0;
 }
 
 .selector__list {
@@ -129,6 +128,8 @@
   padding-bottom: 77px;
   padding-left: 24px;
   padding-right: 24px;
+
+  overflow-y: auto;
 
   color: $white-color;
   font-weight: 400;

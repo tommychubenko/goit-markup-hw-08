@@ -22,7 +22,9 @@
 }
 
 .adress__list {
-  margin-bottom: 60px;
+  @media screen and (max-width: $tablet) {
+    margin-bottom: 60px;
+  }
 }
 
 .adress__link {
@@ -67,7 +69,6 @@
 .social-media__list--footer {
   display: flex;
   justify-content: center;
-  margin-bottom: 60px;
   &:not(:last-child) {
     margin-right: 10px;
   }
@@ -82,14 +83,17 @@
 }
 
 .tablet-footer {
+  margin-bottom: 60px;
   @media screen and (min-width: $tablet) {
     display: flex;
     align-items: baseline;
     justify-content: space-around;
+
     @media screen and (min-width: $pc) {
       display: flex;
       align-items: baseline;
       text-align: left;
+      margin-bottom: 0;
     }
   }
 }
@@ -134,8 +138,6 @@
   flex-wrap: wrap;
   flex-direction: column;
 
-  @media screen and (min-width: $tablet) {
-  }
   @media screen and (min-width: $pc) {
     display: flex;
     align-items: baseline;

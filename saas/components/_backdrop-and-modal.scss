@@ -6,17 +6,23 @@
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.2);
+  transition: transform $standart-transition-time $standart-transition-style;
 }
 
 .is-hidden {
-  opacity: 0;
+  transform: translateY(-101%);
   pointer-events: none;
+  transition: transform $standart-transition-time $standart-transition-style;
 }
 
 .modal {
+  @media screen and (max-width: $mobile) {
+    padding: 40px 20px;
+    overflow-y: auto;
+  }
   position: absolute;
-  width: 450px;
-  height: 609px;
+  width: 90%;
+  height: 90%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -26,7 +32,7 @@
 
   background-color: $white-color;
   border-radius: 4px;
-  overflow-y: scroll;
+  overflow: hidden;
 
   @media screen and (min-width: $tablet) {
     width: 450px;
@@ -78,8 +84,11 @@
   text-align: center;
   letter-spacing: 0.03em;
   color: $primary-text-color;
-
   margin-bottom: 12px;
+
+  @media screen and (max-width: $mobile) {
+    font-size: 5vw;
+  }
 }
 
 .form__label {
@@ -110,7 +119,6 @@
   &:focus {
     outline-width: 0;
     border-color: $accent-text-color;
-    //   fill: $accent-text-color;
   }
 }
 
@@ -178,6 +186,9 @@
 }
 
 .form__checkbox-icon {
+  @media screen and (max-width: $mobile) {
+    width: 21px;
+  }
   width: 16px;
   height: 15px;
   margin-right: 10px;
@@ -198,6 +209,7 @@
     background-color: $accent-text-color;
     background-image: url("../images/icon-check.svg");
     background-size: contain;
+    background-repeat: no-repeat;
     background-origin: border-box;
     border: 2px solid $accent-text-color;
   }

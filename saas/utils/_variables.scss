@@ -8,6 +8,7 @@ $icon-color-two: #f5f4fa;
 $border-color-one: #eeeeee;
 $standart-transition-time: 250ms;
 $standart-transition-style: cubic-bezier(0.4, 0, 0.2, 1);
+$mobile: 480px;
 $tablet: 768px;
 $pc: 1200px;
 
@@ -17,6 +18,7 @@ body {
   font-size: 14px;
   font-weight: 400;
   color: var(--primary-text-color);
+  min-width: 320px;
   &.modal-open {
     overflow: hidden;
   }
@@ -55,16 +57,10 @@ ul {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-}
-
-@media screen and (min-width: $tablet) {
-  .container {
+  @media screen and (min-width: $tablet) {
     width: 768px;
   }
-}
-
-@media screen and (min-width: $pc) {
-  .container {
+  @media screen and (min-width: $pc) {
     width: 1200px;
   }
 }
