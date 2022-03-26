@@ -1683,6 +1683,9 @@ ul {
 
 @media screen and (min-width: 768px) {
   .grid {
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
     gap: 30px;
   }
 }
