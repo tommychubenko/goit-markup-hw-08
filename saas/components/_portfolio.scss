@@ -1,20 +1,31 @@
 .selector {
-  padding: 94px 0;
+  padding: 60px 0;
+
+  @media screen and (min-width: $pc) {
+    padding: 94px 0;
+  }
 }
 
 .selector__list {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 
   @media screen and (min-width: $tablet) {
     justify-content: center;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: $pc) {
+    margin-bottom: 50px;
   }
 }
 
 .selector__item {
   margin-right: 8px;
   margin-bottom: 15px;
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 0;
+  }
 }
 
 .selector__button {
@@ -46,10 +57,7 @@
 
 .grid {
   display: flex;
-  // flex-direction: column;
-  // margin: -15px;
 
-  // margin: 0 auto;
   flex-wrap: wrap;
   justify-content: center;
 
@@ -57,7 +65,7 @@
     // flex-direction: row;
     // flex-wrap: wrap;
     // align-items: center;
-    justify-content: unset;
+    // justify-content: unset;
     gap: 30px;
   }
   @media screen and (min-width: $pc) {
@@ -66,25 +74,18 @@
 }
 
 .grid__item {
-  // margin: 15px;
-  // width: 450px;
-  // height: 100%;
   &:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
   @media screen and (min-width: $tablet) {
     flex-basis: calc(100% / 2 - 2 * 15px);
     &:not(:last-child) {
       margin-bottom: unset;
     }
-    // width: 354px;
-    // height: 440px;
-    // height: 100%;
-    // display: flex;
   }
   @media screen and (min-width: $pc) {
     flex-basis: calc(100% / 3 - 2 * 15px);
-    width: 370px;
+    // width: 370px;
   }
 }
 
@@ -96,14 +97,13 @@
   padding: 0;
 }
 
-.grid__image {
-  // height: 100%;
-}
-
 .grid__link {
-  display: block;
+  // display: block;
   // height: 100%;
+  // display: flex;
+  // flex-direction: column;
   text-decoration: none;
+  // flex-grow: 0;
   transition: box-shadow $standart-transition-time $standart-transition-style;
   &:hover,
   &:focus {
@@ -114,11 +114,17 @@
 }
 
 .grid__padding-20 {
+  display: flex;
+  flex-direction: column;
   padding: 20px 24px;
-  height: 150px;
+  // height: 150px;
   border-bottom: 1px solid $border-color-one;
   border-left: 1px solid $border-color-one;
   border-right: 1px solid $border-color-one;
+}
+
+.grow {
+  flex-grow: 1;
 }
 
 .grid__title {

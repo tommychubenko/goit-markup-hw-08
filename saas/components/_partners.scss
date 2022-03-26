@@ -41,6 +41,12 @@
     border: $accent-text-color 1px solid;
     outline-width: 0;
   }
+  @media screen and (min-width: $tablet) {
+    width: 226px;
+  }
+  @media screen and (min-width: $pc) {
+    width: 170px;
+  }
 }
 
 .partners__icon {

@@ -6,7 +6,7 @@
   background-position: center;
   background-repeat: no-repeat;
   text-align: center;
-  padding: 118px 60px;
+  padding: 118px 0;
   background-color: $background-color-number-two;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
@@ -51,7 +51,7 @@
   text-transform: uppercase;
 
   @media screen and (max-width: $mobile) {
-    font-size: 8vw;
+    font-size: 6vw;
   }
 
   @media screen and (min-width: $pc) {
