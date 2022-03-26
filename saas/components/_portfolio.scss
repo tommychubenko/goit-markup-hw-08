@@ -46,14 +46,19 @@
 
 .grid {
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   // margin: -15px;
-  gap: 30px;
-  margin: 0 auto;
-  align-items: center;
+
+  // margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+
   @media screen and (min-width: $tablet) {
-    flex-direction: row;
-    flex-wrap: wrap;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // align-items: center;
+    justify-content: unset;
+    gap: 30px;
   }
   @media screen and (min-width: $pc) {
     justify-content: center;
@@ -62,11 +67,18 @@
 
 .grid__item {
   // margin: 15px;
-  width: 450px;
+  // width: 450px;
+  // height: 100%;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
   @media screen and (min-width: $tablet) {
     flex-basis: calc(100% / 2 - 2 * 15px);
-    width: 354px;
-    height: 440px;
+    &:not(:last-child) {
+      margin-bottom: unset;
+    }
+    // width: 354px;
+    // height: 440px;
     // height: 100%;
     // display: flex;
   }
@@ -79,17 +91,18 @@
 .grid__image-thumb {
   position: relative;
   overflow: hidden;
-  height: 294px;
+  // height: 294px;
   margin: 0;
   padding: 0;
 }
 
 .grid__image {
-  width: auto;
+  // height: 100%;
 }
 
 .grid__link {
   display: block;
+  // height: 100%;
   text-decoration: none;
   transition: box-shadow $standart-transition-time $standart-transition-style;
   &:hover,
@@ -102,6 +115,7 @@
 
 .grid__padding-20 {
   padding: 20px 24px;
+  height: 150px;
   border-bottom: 1px solid $border-color-one;
   border-left: 1px solid $border-color-one;
   border-right: 1px solid $border-color-one;
