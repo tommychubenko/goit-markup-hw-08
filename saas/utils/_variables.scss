@@ -8,9 +8,9 @@ $icon-color-two: #f5f4fa;
 $border-color-one: #eeeeee;
 $standart-transition-time: 250ms;
 $standart-transition-style: cubic-bezier(0.4, 0, 0.2, 1);
-$mobile: 480px;
-$tablet: 768px;
-$pc: 1200px;
+$mobile: 479.98 + px;
+$tablet: 767.98 + px;
+$pc: 1199.98 + px;
 
 body {
   background-color: $white-color;
@@ -57,6 +57,10 @@ ul {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+  @media screen and (min-width: $mobile) {
+    width: 450px;
+  }
+
   @media screen and (min-width: $tablet) {
     width: 768px;
   }
