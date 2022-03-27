@@ -169,7 +169,6 @@ ul {
         -ms-flex-direction: unset;
             flex-direction: unset;
     margin-left: 305px;
-    padding: 32px 0;
   }
 }
 
@@ -280,7 +279,7 @@ ul {
 
 @media screen and (min-width: 767.98px) and (min-width: 1199.98px) {
   .link-1 {
-    padding-top: unset;
+    padding: 32px 0;
   }
 }
 
@@ -292,7 +291,7 @@ ul {
 
 @media screen and (min-width: 767.98px) and (min-width: 1199.98px) {
   .link-2 {
-    padding-bottom: unset;
+    padding: 32px 0;
   }
 }
 
