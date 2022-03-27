@@ -1,3 +1,15 @@
+.mobile-button__menu .icon-close {
+  display: none;
+}
+
+.mobile-button__menu.is-open .icon-close {
+  display: block;
+}
+
+.mobile-button__menu.is-open .icon-menu {
+  display: none;
+}
+
 .site-header {
   border-bottom: 1px solid #ececec;
 }
@@ -26,6 +38,7 @@
   height: 60px;
   background-color: $white-color;
 }
+
 .mobile-button__menu {
   // position: absolute;
   z-index: 2;
@@ -40,34 +53,31 @@
     display: none;
   }
 }
+
 .nav-links {
   display: none;
+
   @media screen and (min-width: $tablet) {
     display: flex;
     margin-left: 88px;
   }
 }
+
 .header-contacts {
   display: none;
+
   @media screen and (min-width: $tablet) {
-    display: block;
+    display: flex;
+    flex-direction: column;
     margin-left: auto;
 
     @media screen and (min-width: $pc) {
       display: flex;
+      flex-direction: unset;
       margin-left: 305px;
       padding: 32px 0;
     }
   }
-}
-.mobile-button__menu .icon-close {
-  display: none;
-}
-.mobile-button__menu.is-open .icon-close {
-  display: block;
-}
-.mobile-button__menu.is-open .icon-menu {
-  display: none;
 }
 
 @media screen and (min-width: $tablet) {
@@ -120,13 +130,11 @@
     }
   }
 
+  // КОТАКТИ В ХЕДЕРІ
+
   .header-contacts__item {
     &:first-child {
       margin-bottom: 10px;
-      padding-top: 21px;
-    }
-    &:last-child {
-      padding-bottom: 21px;
     }
 
     @media screen and (min-width: $pc) {
@@ -135,13 +143,7 @@
       }
 
       &:first-child {
-        margin-bottom: 0;
-      }
-      &:first-child {
-        padding-top: unset;
-      }
-      &:last-child {
-        padding-bottom: unset;
+        margin-bottom: unset;
       }
     }
   }
@@ -166,6 +168,19 @@
       path: {
         fill: currentColor;
       }
+    }
+  }
+
+  .link-1 {
+    padding-top: 21px;
+    @media screen and (min-width: $pc) {
+      padding-top: unset;
+    }
+  }
+  .link-2 {
+    padding-bottom: 21px;
+    @media screen and (min-width: $pc) {
+      padding-bottom: unset;
     }
   }
 }

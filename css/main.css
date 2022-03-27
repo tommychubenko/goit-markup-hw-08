@@ -4,7 +4,6 @@ body {
   font-size: 14px;
   font-weight: 400;
   color: var(--primary-text-color);
-  min-width: 320px;
 }
 
 body.modal-open {
@@ -62,6 +61,18 @@ ul {
   .container {
     width: 1200px;
   }
+}
+
+.mobile-button__menu .icon-close {
+  display: none;
+}
+
+.mobile-button__menu.is-open .icon-close {
+  display: block;
+}
+
+.mobile-button__menu.is-open .icon-menu {
+  display: none;
 }
 
 .site-header {
@@ -137,7 +148,13 @@ ul {
 
 @media screen and (min-width: 767.98px) {
   .header-contacts {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-left: auto;
   }
 }
@@ -147,21 +164,13 @@ ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: unset;
+    -webkit-box-direction: unset;
+        -ms-flex-direction: unset;
+            flex-direction: unset;
     margin-left: 305px;
     padding: 32px 0;
   }
-}
-
-.mobile-button__menu .icon-close {
-  display: none;
-}
-
-.mobile-button__menu.is-open .icon-close {
-  display: block;
-}
-
-.mobile-button__menu.is-open .icon-menu {
-  display: none;
 }
 
 @media screen and (min-width: 767.98px) {
@@ -228,10 +237,6 @@ ul {
 @media screen and (min-width: 767.98px) {
   .header-contacts__item:first-child {
     margin-bottom: 10px;
-    padding-top: 21px;
-  }
-  .header-contacts__item:last-child {
-    padding-bottom: 21px;
   }
 }
 
@@ -240,13 +245,7 @@ ul {
     margin-right: 30px;
   }
   .header-contacts__item:first-child {
-    margin-bottom: 0;
-  }
-  .header-contacts__item:first-child {
-    padding-top: unset;
-  }
-  .header-contacts__item:last-child {
-    padding-bottom: unset;
+    margin-bottom: unset;
   }
 }
 
@@ -273,6 +272,27 @@ ul {
   .header-contacts__link:hover, .header-contacts__link:focus {
     color: #2196f3;
     path-fill: currentColor;
+  }
+  .link-1 {
+    padding-top: 21px;
+  }
+}
+
+@media screen and (min-width: 767.98px) and (min-width: 1199.98px) {
+  .link-1 {
+    padding-top: unset;
+  }
+}
+
+@media screen and (min-width: 767.98px) {
+  .link-2 {
+    padding-bottom: 21px;
+  }
+}
+
+@media screen and (min-width: 767.98px) and (min-width: 1199.98px) {
+  .link-2 {
+    padding-bottom: unset;
   }
 }
 
@@ -390,6 +410,14 @@ ul {
       flex-wrap: wrap;
 }
 
+.mobile-menu__social-network--item {
+  padding: 0 10px;
+}
+
+.mobile-menu__social-network--item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
 .mobile-menu__social-network--link {
   text-decoration: none;
   font-weight: 500;
@@ -397,21 +425,6 @@ ul {
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: #2196f3;
-}
-
-@media screen and (max-width: 479.98px) {
-  .mobile-menu__social-network--link {
-    font-size: 3vw;
-  }
-}
-
-.mobile-menu__divider {
-  display: block;
-  margin: 0 10px;
-  font-size: 22px;
-  line-height: 1;
-  color: #757575;
-  opacity: 0.2;
 }
 
 .hero {
@@ -547,13 +560,15 @@ ul {
 }
 
 .benefits__icon-area {
-  padding: 25px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-preferred-size: calc(100% - 2 * 15px);
+      flex-basis: calc(100% - 2 * 15px);
+  height: 120px;
   margin-bottom: 30px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -600,7 +615,6 @@ ul {
         flex-wrap: nowrap;
     -ms-flex-line-pack: center;
         align-content: center;
-    margin: 0;
   }
 }
 
@@ -653,7 +667,7 @@ ul {
     margin-right: 30px;
   }
   .images-samples__image {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     display: block;
   }
@@ -1330,8 +1344,8 @@ ul {
   padding: 40px;
   overflow-y: auto;
   position: absolute;
-  width: 300px;
-  height: 500px;
+  width: 98%;
+  height: 90%;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -1341,14 +1355,6 @@ ul {
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: #ffffff;
   border-radius: 4px;
-  overflow-y: scroll;
-}
-
-@media screen and (min-width: 410px) {
-  .modal {
-    width: 400px;
-    height: 610px;
-  }
 }
 
 @media screen and (min-width: 479.98px) {
@@ -1679,11 +1685,9 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: -15px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 @media screen and (min-width: 767.98px) {
@@ -1691,7 +1695,6 @@ ul {
     -webkit-box-pack: unset;
         -ms-flex-pack: unset;
             justify-content: unset;
-    gap: 30px;
   }
 }
 
@@ -1703,6 +1706,10 @@ ul {
   }
 }
 
+.grid__item {
+  width: 450px;
+}
+
 .grid__item:not(:last-child) {
   margin-bottom: 30px;
 }
@@ -1711,6 +1718,7 @@ ul {
   .grid__item {
     -ms-flex-preferred-size: calc(100% / 2 - 2 * 15px);
         flex-basis: calc(100% / 2 - 2 * 15px);
+    margin: 15px;
   }
   .grid__item:not(:last-child) {
     margin-bottom: unset;
@@ -1724,6 +1732,28 @@ ul {
   }
 }
 
+.grid__image {
+  width: 300px;
+}
+
+@media screen and (min-width: 479.98px) {
+  .grid__image {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 767.98px) {
+  .grid__image {
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 1199.98px) {
+  .grid__image {
+    width: 370px;
+  }
+}
+
 .grid__image-thumb {
   position: relative;
   overflow: hidden;
@@ -1732,6 +1762,14 @@ ul {
 }
 
 .grid__link {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-decoration: none;
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1754,15 +1792,12 @@ ul {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 20px 24px;
-  border-bottom: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
-}
-
-.grow {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
 }
 
 .grid__title {

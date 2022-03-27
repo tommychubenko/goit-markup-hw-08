@@ -25,52 +25,51 @@
     <!--Хедер-->
 
     <header class="site-header">
-
+    
         <div class="container main-nav">
             <nav class="navigation">
-
+    
                 <div class="mobile-header">
-
+    
                     <a class="logo" href="./index.html">
                         Web<div class="logo--studio-black">Studio</div></a>
-
-
+    
+    
                     <button type="button" class="mobile-button__menu" data-menu-button aria-expanded="false"
                         aria-controls="mobile-menu">
-                        <svg class="mobile-button__icon" height="40" width="40"
-                            aria-label="Переключатель мобильного меню">
-
+                        <svg class="mobile-button__icon" height="40" width="40" aria-label="Переключатель мобильного меню">
+    
                             <use class="icon-menu" href="./images/symbol-defs.svg#icon-menu-40px"></use>
                             <use class="icon-close" href="./images/symbol-defs.svg#icon-close-40px"></use>
-
+    
                         </svg>
                     </button>
-
+    
                 </div>
-
+    
                 <ul class="nav-links">
-                    <li class="nav-links__item"><a href="./index.html" class="nav-links__link ">Студия</a>
+                    <li class="nav-links__item"><a href="./index.html"
+                            class="nav-links__link ">Студия</a>
                     </li>
-                    <li class="nav-links__item"><a href="./portfolio.html"
-                            class="nav-links__link nav-links__link--current">Портфолио</a>
+                    <li class="nav-links__item"><a href="./portfolio.html" class="nav-links__link nav-links__link--current">Портфолио</a>
                     </li>
                     <li class="nav-links__item"><a href="" class="nav-links__link">Контакты</a></li>
                 </ul>
             </nav>
-
-
+    
+    
             <ul class="header-contacts">
                 <li class="header-contacts__item">
-                    <a href="mailto:info@devstudio.com" class="header-contacts__link"><svg class="header-contacts__icon"
-                            width="16px" height="12px">
+                    <a href="mailto:info@devstudio.com" class="header-contacts__link link-1"><svg
+                            class="header-contacts__icon" width="16px" height="12px">
                             <use href="./images/symbol-defs.svg#icon-mail"></use>
                         </svg>
                         info@devstudio.com</a>
                 </li>
                 <li class="header-contacts__item">
-
-
-                    <a href="tel:+380961111111" class="header-contacts__link"><svg class="header-contacts__icon"
+    
+    
+                    <a href="tel:+380961111111" class="header-contacts__link link-2"><svg class="header-contacts__icon"
                             width="10px" height="16px">
                             <use href="./images/symbol-defs.svg#icon-phone"></use>
                         </svg>
@@ -79,10 +78,10 @@
                 </li>
             </ul>
         </div>
-
-
-
-
+    
+    
+    
+    
     </header>
     <!--Средняя часть документа-->
 
@@ -104,9 +103,18 @@
                         <a class="grid__link" href="">
                             <div class="grid__image-thumb">
 
-                                <img class="grid__image" srcset="./images/portfolio/port-01@1x.jpg 450w,
-                                ./images/portfolio/port-01@2x.jpg 900w" sizes="450px"
-                                    src="./images/portfolio/port-01@1x.jpg" alt="Технокряк">
+                                <picture>
+                                    <source srcset="./images/portfolio/pc/port-01@1x.jpg 1x, ./images/portfolio/pc/port-01@2x.jpg 2x "
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/portfolio/tablet/port-01@1x.jpg 1x, ./images/portfolio/tablet/port-01@2x.jpg 2x,"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/portfolio/mobile/port-01@1x.jpg 1x, ./images/portfolio/mobile/port-01@2x.jpg 2x,">
+                                    <img src="./images/portfolio/pc/port-01@1x.jpg" alt="Технокряк">
+                                </picture>
+
+                    
 
                                 <div class="grid__overflow">Ресурс предлагает комплексные предложения с разным уровнем
                                     функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения
@@ -115,7 +123,7 @@
                             <div class="grid__padding-20">
 
                                 <div class="grid__title">Технокряк</div>
-                                <div class="grid__text grow">Веб-сайт</div>
+                                <div class="grid__text">Веб-сайт</div>
                                 
                             </div>
                         </a> 
@@ -123,9 +131,14 @@
                     </li>
                     <li class="grid__item"> <a class="grid__link" href="">
                             <div class="grid__image-thumb">
-                                <img class="grid__image" srcset="./images/portfolio/port-02@1x.jpg 450w,
-                                ./images/portfolio/port-02@2x.jpg 900w" sizes="450px"
-                                    src="./images/portfolio/port-02@1x.jpg" alt="Постер">
+                                <picture>
+                                    <source srcset="./images/portfolio/pc/port-02@1x.jpg 1x, ./images/portfolio/pc/port-02@2x.jpg 2x "
+                                        media="(min-width: 1200px)">
+                                    <source srcset="./images/portfolio/tablet/port-02@1x.jpg 1x, ./images/portfolio/tablet/port-02@2x.jpg 2x,"
+                                        media="(min-width: 768px)">
+                                    <source srcset="./images/portfolio/mobile/port-02@1x.jpg 1x, ./images/portfolio/mobile/port-02@2x.jpg 2x,">
+                                    <img src="./images/portfolio/pc/port-02@1x.jpg" alt="Постер">
+                                </picture>
 
 
                                 <div class="grid__overflow">Ресурс предлагает комплексные предложения с разным уровнем
@@ -138,9 +151,18 @@
                             </div>
                         </a> </li>
                     <li class="grid__item"> <a class="grid__link" href="">
-                            <div class="grid__image-thumb"> <img class="grid__image" srcset="./images/portfolio/port-03@1x.jpg 450w,
-                            ./images/portfolio/port-03@2x.jpg 900w" sizes="450px"
-                                    src="./images/portfolio/port-03@1x.jpg" alt="Приложение ресторана">
+                            <div class="grid__image-thumb"> 
+                                
+                            <picture>
+                                <source srcset="./images/portfolio/pc/port-03@1x.jpg 1x, ./images/portfolio/pc/port-03@2x.jpg 2x "
+                                    media="(min-width: 1200px)">
+                                <source srcset="./images/portfolio/tablet/port-03@1x.jpg 1x, ./images/portfolio/tablet/port-03@2x.jpg 2x,"
+                                    media="(min-width: 768px)">
+                                <source srcset="./images/portfolio/mobile/port-03@1x.jpg 1x, ./images/portfolio/mobile/port-03@2x.jpg 2x,">
+                                <img src="./images/portfolio/pc/port-03@1x.jpg" alt="Приложение для ресторана">
+                            </picture>
+
+
                                 <div class="grid__overflow">Ресурс предлагает комплексные предложения с разным уровнем
                                     функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения
                                     о компании или частном лице.</div>
@@ -151,9 +173,18 @@
                             </div>
                         </a> </li>
                     <li class="grid__item"> <a class="grid__link" href="">
-                            <div class="grid__image-thumb"><img class="grid__image" srcset="./images/portfolio/port-04@1x.jpg 450w,
-                           ./images/portfolio/port-04@2x.jpg 900w" sizes="450px"
-                                    src="./images/portfolio/port-04@1x.jpg" alt="Маркетинговій проект">
+                            <div class="grid__image-thumb">
+                                
+                                <picture>
+                                    <source srcset="./images/portfolio/pc/port-04@1x.jpg 1x, ./images/portfolio/pc/port-04@2x.jpg 2x "
+                                        media="(min-width: 1200px)">
+                                    <source srcset="./images/portfolio/tablet/port-04@1x.jpg 1x, ./images/portfolio/tablet/port-04@2x.jpg 2x,"
+                                        media="(min-width: 768px)">
+                                    <source srcset="./images/portfolio/mobile/port-04@1x.jpg 1x, ./images/portfolio/mobile/port-04@2x.jpg 2x,">
+                                    <img src="./images/portfolio/pc/port-04@1x.jpg" alt="Маркетинговый проект">
+                                </picture>
+
+
                                 <div class="grid__overflow">Ресурс предлагает комплексные предложения с разным уровнем
                                     функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения
                                     о компании или частном лице.</div>
@@ -164,9 +195,18 @@
                             </div>
                         </a> </li>
                     <li class="grid__item"> <a class="grid__link" href="">
-                            <div class="grid__image-thumb"> <img class="grid__image" srcset="./images/portfolio/port-05@1x.jpg 450w,
-                          ./images/portfolio/port-05@2x.jpg 900w" sizes="450px" src="./images/portfolio/port-05@1x.jpg"
-                                    alt="Приложение Боксес">
+                            <div class="grid__image-thumb"> 
+                                
+                                <picture>
+                                    <source srcset="./images/portfolio/pc/port-05@1x.jpg 1x, ./images/portfolio/pc/port-05@2x.jpg 2x "
+                                        media="(min-width: 1200px)">
+                                    <source srcset="./images/portfolio/tablet/port-05@1x.jpg 1x, ./images/portfolio/tablet/port-05@2x.jpg 2x,"
+                                        media="(min-width: 768px)">
+                                    <source srcset="./images/portfolio/mobile/port-05@1x.jpg 1x, ./images/portfolio/mobile/port-05@2x.jpg 2x,">
+                                    <img src="./images/portfolio/pc/port-05@1x.jpg" alt="Приложение Боксес">
+                                </picture>
+
+
                                 <div class="grid__overflow">Ресурс предлагает комплексные предложения с разным уровнем
                                     функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения
                                     о компании или частном лице.</div>
@@ -177,9 +217,18 @@
                             </div>
                         </a> </li>
                     <li class="grid__item"> <a class="grid__link" href="">
-                            <div class="grid__image-thumb"><img class="grid__image" srcset="./images/portfolio/port-06@1x.jpg 450w,
-                                                            ./images/portfolio/port-06@2x.jpg 900w" sizes="450px"
-                                    src="./images/portfolio/port-06@1x.jpg" alt="Вэб сайт вдохновение">
+                            <div class="grid__image-thumb">
+                                
+                                <picture>
+                                    <source srcset="./images/portfolio/pc/port-06@1x.jpg 1x, ./images/portfolio/pc/port-06@2x.jpg 2x "
+                                        media="(min-width: 1200px)">
+                                    <source srcset="./images/portfolio/tablet/port-06@1x.jpg 1x, ./images/portfolio/tablet/port-06@2x.jpg 2x,"
+                                        media="(min-width: 768px)">
+                                    <source srcset="./images/portfolio/mobile/port-06@1x.jpg 1x, ./images/portfolio/mobile/port-06@2x.jpg 2x,">
+                                    <img src="./images/portfolio/pc/port-06@1x.jpg" alt="Вэб сайт Вдохновение">
+                                </picture>
+
+
                                 <div class="grid__overflow">Ресурс предлагает комплексные предложения с разным уровнем
                                     функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения
                                     о компании или частном лице.</div>
@@ -190,9 +239,18 @@
                             </div>
                         </a> </li>
                     <li class="grid__item"> <a class="grid__link" href="">
-                            <div class="grid__image-thumb"><img class="grid__image" srcset="./images/portfolio/port-07@1x.jpg 450w,
-                             ./images/portfolio/port-07@2x.jpg 900w" sizes="450px"
-                                    src="./images/portfolio/port-07@1x.jpg" alt="Дизайн издания">
+                            <div class="grid__image-thumb">
+                                
+                                <picture>
+                                    <source srcset="./images/portfolio/pc/port-07@1x.jpg 1x, ./images/portfolio/pc/port-07@2x.jpg 2x "
+                                        media="(min-width: 1200px)">
+                                    <source srcset="./images/portfolio/tablet/port-07@1x.jpg 1x, ./images/portfolio/tablet/port-07@2x.jpg 2x,"
+                                        media="(min-width: 768px)">
+                                    <source srcset="./images/portfolio/mobile/port-07@1x.jpg 1x, ./images/portfolio/mobile/port-07@2x.jpg 2x,">
+                                    <img src="./images/portfolio/pc/port-07@1x.jpg" alt="Дизайн издания">
+                                </picture>
+
+
                                 <div class="grid__overflow">Ресурс предлагает комплексные предложения с разным уровнем
                                     функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения
                                     о компании или частном лице.</div>
@@ -203,9 +261,18 @@
                             </div>
                         </a> </li>
                     <li class="grid__item"> <a class="grid__link" href="">
-                            <div class="grid__image-thumb"> <img class="grid__image" srcset="./images/portfolio/port-08@1x.jpg 450w,
-                       ./images/portfolio/port-08@2x.jpg 900w" sizes="450px" src="./images/portfolio/port-08@1x.jpg"
-                                    alt="Маркетинг проэкт">
+                            <div class="grid__image-thumb"> 
+                                
+                                <picture>
+                                    <source srcset="./images/portfolio/pc/port-08@1x.jpg 1x, ./images/portfolio/pc/port-08@2x.jpg 2x "
+                                        media="(min-width: 1200px)">
+                                    <source srcset="./images/portfolio/tablet/port-08@1x.jpg 1x, ./images/portfolio/tablet/port-08@2x.jpg 2x,"
+                                        media="(min-width: 768px)">
+                                    <source srcset="./images/portfolio/mobile/port-08@1x.jpg 1x, ./images/portfolio/mobile/port-08@2x.jpg 2x,">
+                                    <img src="./images/portfolio/pc/port-08@1x.jpg" alt="Маркетинг проект">
+                                </picture>
+
+
                                 <div class="grid__overflow">Ресурс предлагает комплексные предложения с разным уровнем
                                     функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения
                                     о компании или частном лице.</div>
@@ -216,9 +283,18 @@
                             </div>
                         </a> </li>
                     <li class="grid__item"> <a class="grid__link" href="">
-                            <div class="grid__image-thumb"><img srcset="./images/portfolio/port-09@1x.jpg 450w,
-                                                            ./images/portfolio/port-09@2x.jpg 900w" sizes="450px"
-                                    src="./images/portfolio/port-09@1x.jpg" alt="Приложение для роста бизнеса">
+                            <div class="grid__image-thumb">
+                                
+                                <picture>
+                                    <source srcset="./images/portfolio/pc/port-09@1x.jpg 1x, ./images/portfolio/pc/port-09@2x.jpg 2x "
+                                        media="(min-width: 1200px)">
+                                    <source srcset="./images/portfolio/tablet/port-09@1x.jpg 1x, ./images/portfolio/tablet/port-09@2x.jpg 2x,"
+                                        media="(min-width: 768px)">
+                                    <source srcset="./images/portfolio/mobile/port-09@1x.jpg 1x, ./images/portfolio/mobile/port-09@2x.jpg 2x,">
+                                    <img src="./images/portfolio/pc/port-09@1x.jpg" alt="Приложение для роста бизнесса">
+                                </picture>
+
+                                    
                                 <div class="grid__overflow">Ресурс предлагает комплексные предложения с разным уровнем
                                     функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения
                                     о компании или частном лице.</div>
@@ -325,10 +401,10 @@
             <nav class="navigation-mobile">
                 <ul class="nav-links-mobile">
                     <li class="nav-links__item--mobile"><a href="./index.html"
-                            class="nav-links__link--mobile nav-links__link--mobile--current">Студия</a>
+                            class="nav-links__link--mobile ">Студия</a>
                     </li>
                     <li class="nav-links__item--mobile"><a href="./portfolio.html"
-                            class="nav-links__link--mobile">Портфолио</a>
+                            class="nav-links__link--mobile nav-links__link--mobile--current">Портфолио</a>
                     </li>
                     <li class="nav-links__item--mobile"><a href="" class="nav-links__link--mobile">Контакты</a></li>
                 </ul>

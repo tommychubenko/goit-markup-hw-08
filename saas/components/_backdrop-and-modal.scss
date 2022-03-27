@@ -19,8 +19,9 @@
   padding: 40px;
   overflow-y: auto;
   position: absolute;
-  width: 300px;
-  height: 500px;
+  width: 98%;
+  height: 90%;
+
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -30,12 +31,12 @@
 
   background-color: $white-color;
   border-radius: 4px;
-  overflow-y: scroll;
+  // overflow-y: scroll;
 
-  @media screen and (min-width: 410px) {
-    width: 400px;
-    height: 610px;
-  }
+  // @media screen and (min-width: 410px) {
+  //   width: 400px;
+  //   height: 610px;
+  // }
 
   @media screen and (min-width: $mobile) {
     width: 450px;

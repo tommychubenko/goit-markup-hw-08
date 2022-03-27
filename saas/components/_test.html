@@ -1,0 +1,51 @@
+
+
+
+<picture>
+  <source srcset="photo.webp 1x, photo@2x.webp 2x" type="image/webp" />
+  <source srcset="photo.jpg 1x, photo@2x.jpg 2x" type="image/jpeg" />
+  <img src="photo.jpg" alt="Кот" />
+</picture>
+
+
+
+<picture>
+  <source sizes="(width: 450px)" srcset="./images/index/our-team/mobile/member-1@1x.jpg 1x, ./images/index/our-team/mobile/member-1@2x.jpg 2x"  />
+  <source media="(min-width: 768px)" sizes="(width: 354px)" srcset="./images/index/our-team/tablet/member-1@1x.jpg 1x, ./images/index/our-team/tablet/member-1@2x.jpg 2x" />
+  <source media="(min-width: 1200px)" sizes="(width: 270px)" srcset="./images/index/our-team/pc/member-1@1x.jpg 1x, ./images/index/our-team/pc/member-1@2x.jpg 2x"/>
+  <!-- <img src="./images/index/our-team/mobile/member-1@1x.jpg" alt="Фотография" /> -->
+</picture>
+
+
+
+
+<picture>
+  <source srcset="./images/index/our-team/mobile/member-1@1x.jpg 450w, ./images/index/our-team/mobile/member-1@1x.jpg 900w"
+    media="(max-width: 767px)" sizes="(min-width: 450px) 450px">
+
+  <source
+    srcset="./images/index/our-team/tablet/member-1@1x.jpg 354w, ./images/index/our-team/tablet/member-1@1x.jpg 708w"
+    media="(min-width: 768px)" sizes="(min-width: 354px) 354px">
+
+    <source
+      srcset="./images/index/our-team/pc/member-1@1x.jpg 270w, ./images/index/our-team/pc/member-1@1x.jpg 540w"
+      media="(min-width: 1200px)" sizes="(min-width: 270px) 270px">
+
+  <img src="./images/index/our-team/mobile/member-1@1x.jpg" alt="Team member">
+</picture>
+
+
+
+
+<picture>
+  <!-- <source
+    srcset="./images/index/our-team/mobile/member-1@1x.jpg" media="(max-width: 767px)"> -->
+
+  <source
+    srcset="./images/index/our-team/tablet/member-1@1x.jpg" media="(min-width: 768px)">
+
+  <source 
+  srcset="./images/index/our-team/pc/member-1@1x.jpg" media="(min-width: 1200px)">
+
+  <img src="./images/index/our-team/mobile/member-1@1x.jpg" alt="Team member">
+</picture>
