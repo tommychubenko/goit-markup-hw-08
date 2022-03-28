@@ -103,28 +103,25 @@
   width: 44px;
   align-items: center;
   justify-content: center;
-  @media screen and (min-width: $tablet) {
-    background-color: $white-color;
+
+  background-color: $white-color;
+  border-radius: 50%;
+  transition: background-color $standart-transition-time
+    $standart-transition-style;
+  &:hover,
+  &:focus {
+    background-color: $accent-text-color;
     border-radius: 50%;
-    transition: background-color $standart-transition-time
-      $standart-transition-style;
-    &:hover,
-    &:focus {
-      background-color: $accent-text-color;
-      border-radius: 50%;
-    }
   }
 }
 
 .social-media__icon {
   fill: $icon-color-one;
 
-  @media screen and (min-width: $tablet) {
-    transition: fill $standart-transition-time $standart-transition-style;
-    .social-media__link:hover &,
-    .social-media__link:focus & {
-      fill: $white-color;
-    }
+  transition: fill $standart-transition-time $standart-transition-style;
+  .social-media__link:hover &,
+  .social-media__link:focus & {
+    fill: $white-color;
   }
 }
 @media screen and (min-width: $pc) {

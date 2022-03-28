@@ -49,6 +49,11 @@
   padding: 0;
   border: 0;
   background-color: transparent;
+  transform: fill $standart-transition-time $standart-transition-style;
+  &:hover,
+  &:focus {
+    fill: $accent-text-color;
+  }
   @media screen and (min-width: $tablet) {
     display: none;
   }

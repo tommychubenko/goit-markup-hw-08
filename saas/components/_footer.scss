@@ -31,20 +31,19 @@
 .adress__link {
   font-weight: 400;
   font-size: 14px;
+  letter-spacing: 0.03em;
   line-height: 1.71;
   color: $white-color;
   text-decoration: none;
   font-style: normal;
+  transition: color $standart-transition-time $standart-transition-style;
   &:not(:last-child) {
     margin-bottom: 8px;
   }
 
-  @media screen and (min-width: $tablet) {
-    transition: color $standart-transition-time $standart-transition-style;
-    &:hover,
-    &:focus {
-      color: $accent-text-color;
-    }
+  &:hover,
+  &:focus {
+    color: $accent-text-color;
   }
 }
 
@@ -107,14 +106,12 @@
   height: 44px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  transition: background-color $standart-transition-time
+    $standart-transition-style;
 
-  @media screen and (min-width: $tablet) {
-    transition: background-color $standart-transition-time
-      $standart-transition-style;
-    &:hover,
-    &:focus {
-      background-color: $accent-text-color;
-    }
+  &:hover,
+  &:focus {
+    background-color: $accent-text-color;
   }
 }
 

@@ -69,24 +69,26 @@
   }
 }
 
-@media screen and (min-width: $tablet) {
-  .benefits__list {
+.benefits__list {
+  @media screen and (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
     margin: -15px;
-    @media screen and (min-width: $pc) {
-      display: flex;
-      flex-wrap: nowrap;
-      align-content: center;
-    }
+  }
+  @media screen and (min-width: $pc) {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
   }
 }
 
 .benefits__item {
-  margin-bottom: 30px;
   display: block;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
 
   @media screen and (min-width: $tablet) {
     margin: 15px;
