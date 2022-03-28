@@ -1718,9 +1718,6 @@ ul {
         flex-basis: calc(100% / 2 - 2 * 15px);
     margin: 15px;
   }
-  .grid__item:not(:last-child) {
-    margin-bottom: unset;
-  }
 }
 
 @media screen and (min-width: 1199.98px) {

@@ -79,15 +79,10 @@
     margin-bottom: 30px;
   }
   @media screen and (min-width: $tablet) {
-    // width: 354px;
     flex-basis: calc(100% / 2 - 2 * 15px);
     margin: 15px;
-    &:not(:last-child) {
-      margin-bottom: unset;
-    }
   }
   @media screen and (min-width: $pc) {
-    // width: 370px;
     flex-basis: calc(100% / 3 - 2 * 15px);
   }
 }
